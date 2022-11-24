@@ -291,7 +291,7 @@ def restore_needed_space(css):
 
 def unquote_selectors(css):
     """Fix CSS for some specific selectors where Quotes is not needed."""
-    return re.compile('([a-zA-Z]+)="([a-zA-Z0-9-_\.]+)"]').sub(r'\1=\2]', css)
+    return re.compile(r'([a-zA-Z]+)="([a-zA-Z0-9-_\.]+)"]').sub(r'\1=\2]', css)
 
 
 def css_minify(css, wrap=False, comments=False, sort=False, noprefix=False):
